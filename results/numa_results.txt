@@ -1,0 +1,17 @@
+=== NUMA Memory Sweep Benchmark (512 MB, 4 passes) ===
+Detected NUMA nodes: 1
+Topology: Single-node virtual NUMA topology (VMware Workstation guest)
+
+--- Standard Execution (Default Placement) ---
+buffer=512 MB | threads=1 | sum=33554432 | time=0.0988 s
+buffer=512 MB | threads=2 | sum=33554432 | time=0.0541 s
+Multithreaded Memory Bandwidth Speedup (1 -> 2 threads): 0.0988 / 0.0541 = 1.826x
+
+--- NUMA Policy Diagnostics ---
+Note: Only 1 NUMA node is available on this system/VM.
+Remote memory binding (--membind=1) is unsupported in single-node topologies.
+Kernel Diagnostic: libnuma: node 1 out of range / invalid argument.
+
+--- Local Node Binding (Node 0) ---
+buffer=512 MB | threads=1 | sum=33554432 | time=0.0906 s
+buffer=512 MB | threads=2 | sum=33554432 | time=0.0571 s

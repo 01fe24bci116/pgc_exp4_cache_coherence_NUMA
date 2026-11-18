@@ -1,0 +1,18 @@
+=== False Sharing Benchmark (100,000,000 increments) ===
+Configuration: 2 threads
+
+--- Adjacent Layout (False Sharing active) ---
+Run 1: adjacent | threads=2 | total=100000000 | time=0.0128 s | Correct
+Run 2: adjacent | threads=2 | total=100000000 | time=0.0133 s | Correct
+Run 3: adjacent | threads=2 | total=100000000 | time=0.0218 s | Correct
+Median Execution Time: 0.0133 s
+
+--- Padded Layout (64-byte aligned, False Sharing eliminated) ---
+Run 1: padded   | threads=2 | total=100000000 | time=0.0146 s | Correct
+Run 2: padded   | threads=2 | total=100000000 | time=0.0102 s | Correct
+Run 3: padded   | threads=2 | total=100000000 | time=0.0102 s | Correct
+Median Execution Time: 0.0102 s
+
+Performance Analysis:
+False Sharing Ratio (Adjacent Median / Padded Median) = 0.0133 / 0.0102 = 1.3039x
+Speedup with 64-byte padding: +30.4%
