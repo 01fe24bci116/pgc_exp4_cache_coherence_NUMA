@@ -1,0 +1,28 @@
+# Binaries and compiled objects
+bin/
+*.exe
+*.o
+*.out
+false_sharing
+numa_sweep
+compare_numa
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+
+# System and editor temporary files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Intermediate test artifacts
+test_screen.png
+pdf_text.txt

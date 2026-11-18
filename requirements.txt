@@ -1,0 +1,5 @@
+# Requirements for Experiment 4: Cache Coherence and NUMA Performance Simulator
+# Standard library is used for coherence_sim.py (no third-party dependencies required).
+# Optional development/documentation packages:
+matplotlib>=3.5.0
+pypdf>=3.0.0
